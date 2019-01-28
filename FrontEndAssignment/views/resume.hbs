@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Front-End Assignment</title>
+    <meta content="width=device-width,initial-scale=1.0" name="viewport">
+    <link rel="stylesheet" href="../public/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <section class="section1" id="home">
+        <div class="heading">
+            <div class="text box "><a href="#home">Personal<span>View</span></a></div>
+            <div class="home box right"><a href="#home">Home</a></div>
+            <div class="about box right"><a href="#about">About</a></div>
+            <div class="services box right"><a href="#services">Services</a></div>
+            <div class="experience box right"><a href="#experiences">Experience</a></div>
+            <div class="pages box right">
+                Pages
+                <div class="dropdown">
+                    <div class="blogs hidden-menu-item"><a href="#blogs">Blogs</a></div>
+                    <div class="projects hidden-menu-item"><a href="#projects">Projects</a></div>
+                </div>
+            </div>
+            <div class="contact box right"><a href="#contacts">Contact</a></div>
+            <div class="hamburgerIcon box right">Icon</div>
+        </div>
+        <img src="/public/img/img.png" class="image">
+        <div class="content">
+            <h3 class="hi">Hi,</h3>
+            <div class="name">{{ section1.name }}</div>
+            <div class="designation">{{ section1.designation}}</div>
+            <div id="info" class="hobbies">{{section1.info}}</div>
+            <button id="btn">Read more</button>
+        </div>
+    </section>
+
+    <section class="section2" id="about">
+        <div>
+            <h1 class="heading2">About Me</h1>
+        </div>
+        <div class="content2">
+            <div class="info2 box2">
+                <h3>{{section2.info1}}</h3>
+                <p>{{section2.info2}}</p>
+                <button id="btn2"><i class="fas fa-arrow-circle-down"></i> Download CV</button>
+            </div>
+            <div class="box2">
+                <img src="/public/img/img.png" class="img2">
+            </div>
+            <div class="bars box2">
+            {{#each section2.info3 as |bar|}}
+                <h5 class="language">{{bar.name}} <span>{{bar.pecentage}}</span></h5>
+                <div class="w3-border">
+                    <div class="w3-grey" style="height:24px;width:{{bar.pecentage}}"></div>
+                </div>
+            {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <section class="section3" id="services">
+        <h1 class="heading3">Services</h1>
+        <div class="content3">
+            {{#each section3.services as |service|}}
+                <div class="box3">
+                    <i class="{{service.icon}}"></i> <span>{{service.name}}</span>
+                    <p>{{service.description}}</p>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+
+
+    <section class="section4" id="experiences">
+        <div>
+            <h1 class="heading4">Experiences</h1>
+        </div>
+        <div class="container4">
+            <ul>
+                {{#each section4.experiences as |experience|}}
+                    <li class="content4">
+                        {{#if experience.left}}
+                            <div class="name4"  style="float: left">
+                                <h2>{{experience.name}}</h2>
+                                <h6>{{experience.time}}</h6>
+                            </div>
+                        {{else}}
+                            <div class="name4" style="float: right">
+                                <h2>{{experience.name}}</h2>
+                                <h6>{{experience.time}}</h6>
+                            </div>
+                         {{/if}}
+                        {{#if experience.left}}
+                            <div class="text4" style="border-left: 4px solid black">
+                                <p>{{experience.text}}</p>
+                            </div>
+                        {{else}}
+                            <div class="text4" style="border-right: 4px solid black">
+                                <p>{{experience.text}}</p>
+                            </div>
+                        {{/if}}
+
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+
+
+    </section>
+
+
+    <section class="section5" id="blogs">
+        <div>
+            <h1 class="heading5">Blogs</h1>
+        </div>
+        <div class="content5">
+            <div class="container1">
+                <div class="part1">
+                    <h2>{{section5.info1}}</h2>
+                    <p>{{section5.info2}}</p>
+                </div>
+                <div class="subparts">
+                    <div class="part2">
+                        <h5>{{section5.info3.0.date}}</h5>
+                        <h3>{{section5.info3.0.heading}}</h3>
+                        <p>{{section5.info3.0.text}}</p>
+                    </div>
+                    <div class="part3">
+                        <h5>{{section5.info3.1.date}}</h5>
+                        <h3>{{section5.info3.1.heading}}</h3>
+                        <p>{{section5.info3.1.text}}</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="container2">
+                <h5>{{section5.info3.2.date}}</h5>
+                <h3>{{section5.info3.2.heading}}</h3>
+                <p>{{section5.info3.2.text}}</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section6">
+        <div>
+            <h1 class="heading6">Projects</h1>
+        </div>
+        <div class="gridLayout">
+            <div class="Div1">
+                <div class="Div11">
+                   <!-- <img src="{{section6.image1}}">-->
+                </div>
+                <div class="Div12">
+                    <!-- <img src="{{section6.image2}}">-->
+                </div>
+
+            </div>
+            <div class="Div2" id="modalBtn">
+             <!--  <img src="{{section6.image5}}">-->
+                <div class="modal" id="simpleModal">
+                    <div class="modalContent">
+                        <span id="closeBtn">&times;</span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="Div3">
+               <!--  <img src="{{section6.image6}}">-->
+            </div>
+            <div class="Div4">
+                <div class="Div41">
+                  <!--   <img src="{{section6.image3}}">-->
+                </div>
+                <div class="Div42">
+                  <!--   <img src="{{section6.image4}}">-->
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+    <section class="section7" id="testimonials">
+        <div class="heading7Box">
+            <h1 class="heading7">Testimonials</h1>
+        </div>
+
+        <div class="container7">
+            <button class="leftbtn">&lt;</button>
+            <div class="carousel">
+                <ul class="carouselTrack" id="carouselTrackUl">
+                    {{#each section7.testimonials as |testimonial|}}
+                        {{#if testimonial.currentSlide}}
+                            <li class="carouselSlide currentSlide">
+                                <div class="carouselSlideDiv">
+                                    <div class="carouselSlideDiv1">
+                                        <img class="img7" src="{{testimonial.img}}">
+                                    </div>
+                                    <div class="carouselSlideDiv2">
+                                        <h4>{{testimonial.name}}</h4>
+                                        <p>{{testimonial.text}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        {{else}}
+                            <li class="carouselSlide">
+                                <div class="carouselSlideDiv">
+                                    <div class="carouselSlideDiv1">
+                                        <img class="img7" src="{{testimonial.img}}">
+                                    </div>
+                                    <div class="carouselSlideDiv2">
+                                        <h4>{{testimonial.name}}</h4>
+                                        <p>{{testimonial.text}}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+            <button class="rightbtn">&gt;</button>
+            <div class="carouselNav">
+                {{#each section7.testimonials as |testimonial|}}
+                    {{#if testimonial.currentSlide}}
+                        <button class="carouselIndicator currentSlide"></button>
+                    {{else}}
+                        <button class="carouselIndicator"></button>
+                    {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </section>
+
+    <section class="section8" id="contacts">
+        <div>
+            <h1 class="heading8">Contact</h1>
+        </div>
+        <div class="content8">
+            <div class="box8">
+                <h3>Address info </h3>
+                <div class="addinfo">
+                    <i class="fas fa-envelope-open"></i> <span> Email</span>
+                    <h6>ajayjaggi97@gmail.com</h6>
+                </div>
+                <div class="addinfo">
+                    <i class="fas fa-phone"></i> <span> Phone</span>
+                    <h6>9646227215</h6>
+                </div>
+                <div class="addinfo">
+                    <i class="fas fa-map-marker"></i> <span> Address</span>
+                    <h6>#518 DJA Appts sec-13 <br>Dwarka,New Delhi</h6>
+                </div>
+            </div>
+            <div class="box8 formData">
+                <h3>Get In Touch</h3>
+                <form class="personForm" method="post" action="http://localhost:8080/resume">
+                    <div>
+                        <i class=" awesome fas fa-user"></i><span>Name</span> <input placeholder="Name" id="uniform" type="text" name="name">
+                    </div>
+                    <div>
+                        <i class=" awesome fas fa-envelope-open"></i> <span> Email</span> <input placeholder="Email" id="uniform" type="text" name="email">
+                    </div>
+                    <div>
+                        <i class="awesome fas fa-phone"></i> <span> Phone</span> <input  placeholder="Phone" type="text" id="uniform" name="phone">
+                    </div>
+                    <div>
+                        <i class="awesome far fa-edit"></i> <span>Message</span> <textarea placeholder="Message" id="uniform" name="" id="" cols="30" rows="3" name="message"></textarea>
+                    </div>
+                    <input type="submit" value="submit" id="btn8">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <button id="scrollTop">Top</button>
+
+
+
+    <script src="../public/main.js"> </script>
+</body>
+</html>
