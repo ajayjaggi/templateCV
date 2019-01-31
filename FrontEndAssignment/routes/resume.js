@@ -5,7 +5,7 @@ const fs=require('fs');
 
 route.get('/' ,function(req,res,next){
 
-    fetch('https://api.myjson.com/bins/1aghoo')
+    fetch('https://api.myjson.com/bins/dswp4')
      .then(function(response){
          return response.json();
      })
@@ -22,23 +22,32 @@ route.get('/' ,function(req,res,next){
 
 route.post('/',function (req,res,next) {
 
-    let person={
+    let form={
         "name":req.body.name,
         "email":req.body.email,
         "phone":req.body.phone,
         "message":req.body.message
     };
 
-    fs.appendFile("formData.txt",JSON.stringify(person),function (err) {
-        if(err){
-            console.error(err);
-        }
-
-        //console.log('saved the data');
-    });
-    res.redirect('/resume#contacts');
+    if (!checkName(form.name)) {
+        res.json({ "success": "false", "error": "Enter Valid Name" });
+    } else if (!checkEmail(form.email)) {
+        res.json({ "success": "false", "error": "Enter Valid Email" });
+    } else if (!checkPhone(form.phone)) {
+        res.json({ "success": "false", "error": "Enter Valid Phone Number" });
+    } else {
+        fs.appendFile('formData.txt', JSON.stringify(form), function(err) {
+            if (err) throw err;
+            //console.log('Saved!');
+        });
+        res.json({ "success": "true" });
+    }
 
 })
+checkName = (name) => /^[a-zA-Z ]+$/.test(name);
+checkPhone = (phone) => /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone);
+checkEmail = (email) => /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+
 
 
 

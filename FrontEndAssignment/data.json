@@ -1,0 +1,148 @@
+https://api.myjson.com/bins/dswp
+
+
+
+
+{
+  "section1": {
+    "name": "Ajay Jaggi",
+    "designation": "Front End Developer",
+    "info": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus.",
+    "additional": "Fetched more"
+  },
+  "section2": {
+    "info1": "Nulla Viverra Pharetra Sem, Eget Pulvinar Neque Pharetra Ac Int.",
+    "info2": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus.",
+    "info3": [
+      {
+        "name": "Machine Learning",
+        "pecentage": "95%"
+      },
+      {
+        "name": "C++",
+        "pecentage": "85%"
+      },
+      {
+        "name": "Python",
+        "pecentage": "90%"
+      },
+      {
+        "name": "Java",
+        "pecentage": "60%"
+      }
+    ]
+  },
+  "section3": {
+    "services": [
+      {
+        "icon": "fab fa-android",
+        "name": "UI/UX Design",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      },
+      {
+        "icon": "fas fa-mobile-alt",
+        "name": "Mobile Apps",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      },
+      {
+        "icon": "fas fa-blog",
+        "name": "Web Developer",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      },
+      {
+        "icon": "fas fa-camera-retro",
+        "name": "Photoshop",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      },
+      {
+        "icon": "fab fa-accusoft",
+        "name": "Software",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      },
+      {
+        "icon": "fas fa-chart-pie",
+        "name": "Graphic Design",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum"
+      }
+    ]
+  },
+  "section4": {
+    "experiences": [
+      {
+        "left": "true",
+        "name": "UI/UX Designer",
+        "time": "2007 - 2010",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus."
+      },
+      {
+        "left": "",
+        "name": "Web Developer",
+        "time": "2010 - 2013",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus."
+      },
+      {
+        "left": "true",
+        "name": "Mobile Apps",
+        "time": "2013 - 2016",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus."
+      },
+      {
+        "left": "",
+        "name": "Software",
+        "time": "2016 - 2018",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus."
+      }
+    ]
+  },
+  "section5": {
+    "info1": "I Write Beautiful Things",
+    "info2": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.",
+    "info3": [
+      {
+        "date": "25th June",
+        "heading": "Eget Pulvinar Neq",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int."
+      },
+      {
+        "date": "25th June",
+        "heading": "Eget Pulvinar Neq",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int."
+      },
+      {
+        "date": "25th June",
+        "heading": "Eget Pulvinar Neque Pharetra",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. eget pulvinar neque pharetra ac int. In euismod faucibus quam. placerat placerat dolor. Nullam eu elit neque lectus. Polite sadipscing elitr, sed diam nonumy eirmod."
+      }
+    ]
+  },
+  "section6": {
+    "image1": "../public/img/messi1.jpg",
+    "image2": "../public/img/messi2.jpg",
+    "image3": "../public/img/messi3.png",
+    "image4": "../public/img/messi4.png",
+    "image5": "../public/img/messi5.jpg",
+    "image6": "../public/img/messi6.jpg"
+  },
+  "section7": {
+    "testimonials": [
+      {
+        "currentSlide": "true",
+        "img": "../public/img/tesstimonial.jpg",
+        "name": "Henry Mark",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. eget pulvinar neque pharetra ac int. In euismod faucibus quam. placerat placerat dolor. Nullam eu elit neque lectus. Polite sadipscing elitr, sed diam nonumy eirmod."
+      },
+      {
+        "currentSlide": "",
+        "img": "../public/img/tesstimonial.jpg",
+        "name": "Smith Joe",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. eget pulvinar neque pharetra ac int. In euismod faucibus quam. placerat placerat dolor. Nullam eu elit neque lectus. Polite sadipscing elitr, sed diam nonumy eirmod."
+      },
+      {
+        "currentSlide": "",
+        "img": "../public/img/tesstimonial.jpg",
+        "name": "Steve John",
+        "text": "Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. eget pulvinar neque pharetra ac int. In euismod faucibus quam. placerat placerat dolor. Nullam eu elit neque lectus. Polite sadipscing elitr, sed diam nonumy eirmod."
+      }
+    ]
+  }
+}

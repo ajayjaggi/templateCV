@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../public/main.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
     <section class="section1" id="home">
@@ -24,14 +25,27 @@
                 </div>
             </div>
             <div class="contact box right"><a href="#contacts">Contact</a></div>
-            <div class="hamburgerIcon box right">Icon</div>
+            <div class="hamburgerIcon box right"><i class="fas fa-bars"></i>
+                <div class="hamburgerIconContents">
+                    <h6><a href="#home">Home</a></h6>
+                    <h6><a href="#about">About</a></h6>
+                    <h6><a href="#services">Services</a></h6>
+                    <h6><a href="#experiences">Experience</a></h6>
+                    <h6><a href="#blogs">Blogs</a></h6>
+                    <h6><a href="#projects">Projects</a></h6>
+                    <h6><a href="#contacts">Contact</a></h6>
+                </div>
+            </div>
         </div>
-        <img src="/public/img/img.png" class="image">
+        <div class="imageDiv">
+            <img src="/public/img/img.png" class="image">
+        </div>
         <div class="content">
             <h3 class="hi">Hi,</h3>
             <div class="name">{{ section1.name }}</div>
             <div class="designation">{{ section1.designation}}</div>
             <div id="info" class="hobbies">{{section1.info}}</div>
+            <div class="newInfo">{{section1.additional}}</div>
             <button id="btn">Read more</button>
         </div>
     </section>
@@ -44,16 +58,16 @@
             <div class="info2 box2">
                 <h3>{{section2.info1}}</h3>
                 <p>{{section2.info2}}</p>
-                <button id="btn2"><i class="fas fa-arrow-circle-down"></i> Download CV</button>
+                <a href="../public/resume.pdf" download id="btn2"><i class="fas fa-arrow-circle-down"></i> Download CV</a>
             </div>
-            <div class="box2">
+            <div class="box2 imagebox2">
                 <img src="/public/img/img.png" class="img2">
             </div>
             <div class="bars box2">
             {{#each section2.info3 as |bar|}}
                 <h5 class="language">{{bar.name}} <span>{{bar.pecentage}}</span></h5>
                 <div class="w3-border">
-                    <div class="w3-grey" style="height:24px;width:{{bar.pecentage}}"></div>
+                    <div class="w3-grey" style="width:{{bar.pecentage}}"></div>
                 </div>
             {{/each}}
             </div>
@@ -145,39 +159,43 @@
 
 
 
-    <section class="section6">
+    <section class="section6" id="projects">
         <div>
             <h1 class="heading6">Projects</h1>
         </div>
         <div class="gridLayout">
             <div class="Div1">
                 <div class="Div11">
-                   <!-- <img src="{{section6.image1}}">-->
+                   <img src="{{section6.image1}}">
                 </div>
                 <div class="Div12">
-                    <!-- <img src="{{section6.image2}}">-->
+                    <img src="{{section6.image2}}">
                 </div>
 
             </div>
             <div class="Div2" id="modalBtn">
-             <!--  <img src="{{section6.image5}}">-->
+             <img src="{{section6.image5}}">
                 <div class="modal" id="simpleModal">
                     <div class="modalContent">
-                        <span id="closeBtn">&times;</span>
+                        <span id="closeBtn">&times</span>
                     </div>
 
                 </div>
 
             </div>
+
             <div class="Div3">
-               <!--  <img src="{{section6.image6}}">-->
+                <img src="{{section6.image6}}" class="newImageSlide">
+                <img src="../public/img/messi5.jpg" class="newImageSlide">
+                <img src="../public/img/messi2.jpg" class="newImageSlide">
+                <img src="../public/img/messi3.png" class="newImageSlide">
             </div>
             <div class="Div4">
                 <div class="Div41">
-                  <!--   <img src="{{section6.image3}}">-->
+                 <!-- <img src="{{section6.image1}}"-->
                 </div>
                 <div class="Div42">
-                  <!--   <img src="{{section6.image4}}">-->
+                   <img src="{{section6.image4}}">
                 </div>
             </div>
         </div>
@@ -193,7 +211,7 @@
         </div>
 
         <div class="container7">
-            <button class="leftbtn">&lt;</button>
+            <button class="leftbtn isHidden">&lt;</button>
             <div class="carousel">
                 <ul class="carouselTrack" id="carouselTrackUl">
                     {{#each section7.testimonials as |testimonial|}}
@@ -225,7 +243,7 @@
                     {{/each}}
                 </ul>
             </div>
-            <button class="rightbtn">&gt;</button>
+            <button class="rightbtn">&gt</button>
             <div class="carouselNav">
                 {{#each section7.testimonials as |testimonial|}}
                     {{#if testimonial.currentSlide}}
@@ -243,7 +261,7 @@
             <h1 class="heading8">Contact</h1>
         </div>
         <div class="content8">
-            <div class="box8">
+            <div class="box8 boxdata">
                 <h3>Address info </h3>
                 <div class="addinfo">
                     <i class="fas fa-envelope-open"></i> <span> Email</span>
@@ -260,26 +278,27 @@
             </div>
             <div class="box8 formData">
                 <h3>Get In Touch</h3>
-                <form class="personForm" method="post" action="http://localhost:8080/resume">
+                <div class="personForm" id="myform"><!--method="post" action="http://localhost:8080/resume"-->
                     <div>
-                        <i class=" awesome fas fa-user"></i><span>Name</span> <input placeholder="Name" id="uniform" type="text" name="name">
+                        <i class=" awesome fas fa-user"></i> <span>Name</span> <input class="uniform" placeholder="Name" id="inputname" type="text" name="name" required>
                     </div>
                     <div>
-                        <i class=" awesome fas fa-envelope-open"></i> <span> Email</span> <input placeholder="Email" id="uniform" type="text" name="email">
+                        <i class=" awesome fas fa-envelope-open"></i> <span>Email</span> <input class="uniform" placeholder="email" id="inputemail" type="text" name="email" required>
                     </div>
                     <div>
-                        <i class="awesome fas fa-phone"></i> <span> Phone</span> <input  placeholder="Phone" type="text" id="uniform" name="phone">
+                        <i class="awesome fas fa-phone"></i> <span>Phone</span> <input  class="uniform" placeholder="Phone" type="text" id="inputphone" name="phone" required>
                     </div>
                     <div>
-                        <i class="awesome far fa-edit"></i> <span>Message</span> <textarea placeholder="Message" id="uniform" name="" id="" cols="30" rows="3" name="message"></textarea>
+                        <i class="awesome far fa-edit"></i> <span>Message</span> <textarea class="uniform"  placeholder="Message" id="inputmessage" name="message" id="" cols="30" rows="3"  required></textarea>
                     </div>
-                    <input type="submit" value="submit" id="btn8">
-                </form>
+                    <button id="btn8">Submit</button>
+                </div>
+                <p id="newData"></p>
             </div>
         </div>
     </section>
 
-    <button id="scrollTop">Top</button>
+    <button id="scrollTop"><i class="fas fa-angle-double-up"></i></button>
 
 
 
